@@ -20,14 +20,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => context.go('/login'),
+                onPressed: () => context.push('/login'),
                 child: const Text('Login with Email'),
               ),
             ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => context.go('/login'),
+                onPressed: () => context.push('/register'),
                 child: const Text('Register an Account'),
               ),
             ),
