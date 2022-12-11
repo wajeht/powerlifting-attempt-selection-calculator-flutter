@@ -6,6 +6,7 @@ import './screens/welcome_screen.dart';
 import './screens/attempts/attempts_screen.dart';
 import './screens/auth/login_screen.dart';
 import './screens/auth/register_screen.dart';
+import './screens/auth/forgot_password_screen.dart';
 
 final GoRouter routes = GoRouter(
   routes: <RouteBase>[
@@ -28,6 +29,11 @@ final GoRouter routes = GoRouter(
         path: '/register',
         builder: (BuildContext context, GoRouterState state) {
           return const RegisterScreen();
+        }),
+    GoRoute(
+        path: '/forgot-password',
+        builder: (BuildContext context, GoRouterState state) {
+          return const ForgotPasswordScreen();
         }),
   ],
 );
