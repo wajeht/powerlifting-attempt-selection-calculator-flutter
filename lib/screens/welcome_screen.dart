@@ -63,7 +63,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                             minimumSize: const Size(100, 48),
                           ),
                           onPressed: () => context.push('/login'),
-                          child: const Text('Login or Register'),
+                          child: const Text('Login / Register'),
                         ),
                       ),
                       const SizedBox(

@@ -8,6 +8,14 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  bool _showPassword = false;
+
+  void _togglePasswordVisibility() {
+    setState(() {
+      _showPassword = !_showPassword;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,26 +29,57 @@ class _RegisterScreenState extends State<RegisterScreen> {
           children: [
             TextFormField(
               decoration: const InputDecoration(
-                border: UnderlineInputBorder(),
-                hintText: 'Username',
+                labelText: "Username",
+                hintText: 'johnsmith32',
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(
+                  Icons.person_outline,
+                ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             TextFormField(
               decoration: const InputDecoration(
-                border: UnderlineInputBorder(),
-                hintText: 'Email',
+                labelText: "Email",
+                hintText: 'email@domain.com',
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(
+                  Icons.email_outlined,
+                ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             TextFormField(
-              decoration: const InputDecoration(
-                border: UnderlineInputBorder(),
-                hintText: 'Password',
+              obscureText: _showPassword,
+              decoration: InputDecoration(
+                labelText: "Password",
+                hintText: '**********',
+                border: const OutlineInputBorder(),
+                prefixIcon: const Icon(
+                  Icons.lock_outline,
+                ),
+                suffixIcon: IconButton(
+                  onPressed: () => _togglePasswordVisibility(),
+                  icon: Icon(
+                    _showPassword
+                        ? Icons.visibility_outlined
+                        : Icons.visibility_off_outlined,
+                  ),
+                ),
               ),
             ),
+            const SizedBox(height: 10),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                child: const Text('Login'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(100, 48),
+                ),
+                child: const Text('Submit'),
                 onPressed: () {},
               ),
             ),

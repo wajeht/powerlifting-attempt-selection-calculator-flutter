@@ -82,6 +82,20 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () => context.push('/forgot-password'),
               ),
             ),
+            const SizedBox(height: 10),
+            SizedBox(
+              width: double.infinity,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  const Text("Don't have an account yet?"),
+                  TextButton(
+                    onPressed: () => context.push('/register'),
+                    child: const Text("Register"),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
