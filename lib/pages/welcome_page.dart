@@ -42,10 +42,6 @@ class _WelcomePageState extends State<WelcomePage> {
                       ),
                     ),
                   ),
-                  // const SizedBox(
-                  //   height: 30,
-                  // ),
-                  // const Text('Attempt Selection Calculator'),
                 ],
               ),
             ),
