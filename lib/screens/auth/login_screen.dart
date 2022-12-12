@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 10,
             ),
             TextFormField(
-              obscureText: _showPassword,
+              obscureText: !_showPassword,
               decoration: InputDecoration(
                 labelText: "Password",
                 hintText: '**********',
