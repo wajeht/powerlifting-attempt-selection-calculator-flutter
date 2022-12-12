@@ -82,7 +82,6 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     ],
                   ),
                   SizedBox(
-                    width: double.infinity,
                     child: TextButton(
                       style: TextButton.styleFrom(
                         minimumSize: const Size(100, 48),
