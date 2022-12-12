@@ -9,6 +9,7 @@ import 'pages/auth/register_page.dart';
 import 'pages/auth/forgot_password_page.dart';
 import 'pages/database/database_page.dart';
 import 'pages/home_page.dart';
+import 'pages/error_page.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -93,4 +94,7 @@ final GoRouter routes = GoRouter(
           return const ForgotPasswordPage();
         }),
   ],
+  errorBuilder: (BuildContext context, GoRouterState state) {
+    return const ErrorPage();
+  },
 );
