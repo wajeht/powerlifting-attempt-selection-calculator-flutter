@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import './routes.dart';
 
 void main() {
@@ -18,9 +19,10 @@ class MyApp extends StatelessWidget {
       ),
       // routerConfig: routes,
       debugShowCheckedModeBanner: false,
-      routerDelegate: routes.routerDelegate,
-      routeInformationParser: routes.routeInformationParser,
-      routeInformationProvider: routes.routeInformationProvider,
+      routerConfig: ShellRoutes().routes,
+      // routerDelegate: routes.routerDelegate,
+      // routeInformationParser: routes.routeInformationParser,
+      // routeInformationProvider: routes.routeInformationProvider,
     );
   }
 }
