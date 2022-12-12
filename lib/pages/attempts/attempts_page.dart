@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AttemptsScreen extends StatefulWidget {
-  const AttemptsScreen({super.key});
+class AttemptsPage extends StatefulWidget {
+  const AttemptsPage({super.key});
 
   @override
-  State<AttemptsScreen> createState() => _AttemptsScreenState();
+  State<AttemptsPage> createState() => _AttemptsPageState();
 }
 
-class _AttemptsScreenState extends State<AttemptsScreen> {
+class _AttemptsPageState extends State<AttemptsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,6 @@ class _AttemptsScreenState extends State<AttemptsScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Colors.red,
         child: const Icon(Icons.add),
       ),
     );

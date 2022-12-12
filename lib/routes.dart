@@ -7,33 +7,39 @@ import 'pages/attempts/attempts_page.dart';
 import 'pages/auth/login_page.dart';
 import 'pages/auth/register_page.dart';
 import 'pages/auth/forgot_password_page.dart';
+import 'pages/home_page.dart';
 
 final GoRouter routes = GoRouter(
   routes: <RouteBase>[
     GoRoute(
         path: '/',
         builder: (BuildContext context, GoRouterState state) {
-          return const WelcomeScreen();
+          return const WelcomePage();
+        }),
+    GoRoute(
+        path: '/home',
+        builder: (BuildContext context, GoRouterState state) {
+          return const HomePage();
         }),
     GoRoute(
         path: '/attempts',
         builder: (BuildContext context, GoRouterState state) {
-          return const AttemptsScreen();
+          return const AttemptsPage();
         }),
     GoRoute(
         path: '/login',
         builder: (BuildContext context, GoRouterState state) {
-          return const LoginScreen();
+          return const LoginPage();
         }),
     GoRoute(
         path: '/register',
         builder: (BuildContext context, GoRouterState state) {
-          return const RegisterScreen();
+          return const RegisterPage();
         }),
     GoRoute(
         path: '/forgot-password',
         builder: (BuildContext context, GoRouterState state) {
-          return const ForgotPasswordScreen();
+          return const ForgotPasswordPage();
         }),
   ],
 );
