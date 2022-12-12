@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Powerlifting Attempt Selection Calculator',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.blueGrey,
       ),
       // routerConfig: routes,
       debugShowCheckedModeBanner: false,

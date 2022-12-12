@@ -21,14 +21,24 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
           children: [
             TextFormField(
               decoration: const InputDecoration(
-                border: UnderlineInputBorder(),
-                hintText: 'Email',
+                labelText: "Email",
+                hintText: 'email@domain.com',
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(
+                  Icons.email_outlined,
+                ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                child: const Text('Login'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(100, 48),
+                ),
+                child: const Text('Submit'),
                 onPressed: () {},
               ),
             ),

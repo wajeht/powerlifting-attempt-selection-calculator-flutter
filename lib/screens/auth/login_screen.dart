@@ -22,28 +22,44 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             TextFormField(
               decoration: const InputDecoration(
-                border: UnderlineInputBorder(),
-                hintText: 'Email',
+                labelText: "Email",
+                hintText: 'email@domain.com',
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(
+                  Icons.email_outlined,
+                ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             TextFormField(
               decoration: const InputDecoration(
-                border: UnderlineInputBorder(),
-                hintText: 'Password',
+                labelText: "Password",
+                hintText: '**********',
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(
+                  Icons.password_outlined,
+                ),
               ),
             ),
+            const SizedBox(height: 10),
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                child: const Text('Login'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(100, 48),
+                ),
+                child: const Text('Submit'),
                 onPressed: () {},
               ),
             ),
+            const SizedBox(height: 10),
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
                 style: OutlinedButton.styleFrom(
-                  side: const BorderSide(width: 1, color: Colors.red),
+                  minimumSize: const Size(100, 48),
                 ),
                 child: const Text('Forgot password?'),
                 onPressed: () => context.push('/forgot-password'),

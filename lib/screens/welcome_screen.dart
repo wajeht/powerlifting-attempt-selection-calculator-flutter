@@ -28,7 +28,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   Container(
                     padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: Colors.blueGrey,
                       borderRadius: BorderRadius.circular(100),
                     ),
                     child: ClipRRect(
@@ -59,15 +59,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: const Size(100, 48),
+                          ),
                           onPressed: () => context.push('/login'),
                           child: const Text('Login or Register'),
                         ),
                       ),
+                      const SizedBox(
+                        height: 10,
+                      ),
                       SizedBox(
                         width: double.infinity,
                         child: OutlinedButton(
-                          style: OutlinedButton.styleFrom(
-                            side: const BorderSide(width: 1, color: Colors.red),
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: const Size(100, 48),
                           ),
                           child: const Text('Continue as Guest'),
                           onPressed: () => context.push('/attempts'),
@@ -79,8 +85,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     width: double.infinity,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        foregroundColor: Colors.black,
-                        shadowColor: Colors.red,
+                        minimumSize: const Size(100, 48),
                       ),
                       onPressed: () async {
                         final Uri url =
