@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 hintText: '**********',
                 border: const OutlineInputBorder(),
                 prefixIcon: const Icon(
-                  Icons.password_outlined,
+                  Icons.lock_outline,
                 ),
                 suffixIcon: IconButton(
                   onPressed: () => _togglePasswordVisibility(),
