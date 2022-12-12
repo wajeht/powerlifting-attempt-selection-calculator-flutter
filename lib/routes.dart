@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 // screens
-import './screens/welcome_screen.dart';
-import './screens/attempts/attempts_screen.dart';
-import './screens/auth/login_screen.dart';
-import './screens/auth/register_screen.dart';
-import './screens/auth/forgot_password_screen.dart';
+import 'pages/welcome_page.dart';
+import 'pages/attempts/attempts_page.dart';
+import 'pages/auth/login_page.dart';
+import 'pages/auth/register_page.dart';
+import 'pages/auth/forgot_password_page.dart';
 
 final GoRouter routes = GoRouter(
   routes: <RouteBase>[
